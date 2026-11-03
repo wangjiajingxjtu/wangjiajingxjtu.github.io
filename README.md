@@ -23,3 +23,5 @@ GitHub Pages 使用 `main` 分支的 `/(root)` 作为发布来源，根目录保
 封面通过内置 image_gen 生成，压缩为 JPEG 后内嵌在 HTML 中，打开单个文件即可看到完整主页，无需请求外部图片或字体。封面为虚构山水场景，不代表学校实景。生成提示词：
 
 > Use case: photorealistic-natural. Wide 3:1 academic homepage hero background. Calm mountain lake at dawn, layers of misty blue-green mountains, subtle warm peach sky. Natural editorial landscape photography. Center uncluttered and medium-dark for a white overlaid name. Quiet and restrained, soft natural dawn light. No people, no buildings, no text, no logos, no watermark. Do not depict a specific real university.
+
+中文字体与参考主页正文采用相同设置：`"Lora", "Times New Roman", serif`，并使用正常字距。中文字符由浏览器回退到本机衬线字体；不额外加载字体文件。
