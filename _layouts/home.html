@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% include hero.html %}
+<main id="main-content" tabindex="-1">
+  {{ content }}
+  {% for item in site.data.home %}
+    {% assign section = site.pages | where: 'path', item.path | first %}
+    {% if section %}
+    <section{% unless forloop.first %} class="section-rule"{% endunless %} id="{{ section.anchor }}" aria-labelledby="{{ section.anchor }}-title">
+      <h2 id="{{ section.anchor }}-title">{{ section.home_heading | default: section.title | escape }}</h2>
+      {% if item.kind == 'news' %}
+        {% include news-list.html limit=3 %}
+      {% else %}
+        {{ section.content | markdownify }}
+      {% endif %}
+    </section>
+    {% endif %}
+  {% endfor %}
+</main>

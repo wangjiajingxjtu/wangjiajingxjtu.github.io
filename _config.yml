@@ -1,0 +1,43 @@
+title: Jiajing Wang
+description: >-
+  Jiajing Wang, first-year Ph.D. student at Xi’an Jiaotong University.
+  Research interests: multi-node interconnect systems and collective communication.
+url: "https://wangjiajingxjtu.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Shanghai
+author: Jiajing Wang
+initials: JW
+subtitle: Ph.D. Student @ Xi’an Jiaotong University
+subtitle_zh: 西安交通大学 · 博士一年级
+hero_image: /assets/img/hero.jpg
+github_url: "https://github.com/wangjiajingxjtu"
+guide_url: "https://wangjiajingxjtu.github.io/ccf-submission-guide/"
+markdown: kramdown
+highlighter: rouge
+permalink: /news/:year/:month/:day/:title/
+future: false
+strict_front_matter: true
+kramdown:
+  input: GFM
+  hard_wrap: false
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      lang: en
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: en
+exclude:
+  - README.md
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

@@ -1,0 +1,6 @@
+- path: aboutme.md
+- path: research.md
+- path: projects.md
+- path: education.md
+- path: news.md
+  kind: news

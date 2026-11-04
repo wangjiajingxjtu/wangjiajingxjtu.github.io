@@ -1,0 +1,12 @@
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    <a class="avatar" href="{{ '/' | relative_url }}" aria-label="{{ site.title | escape }} — home">{{ site.initials | escape }}</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-navigation" type="button">Menu</button>
+    <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
+      {% for item in site.data.navigation %}
+      <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title | escape }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

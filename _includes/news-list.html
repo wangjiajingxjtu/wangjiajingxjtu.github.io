@@ -1,0 +1,15 @@
+{% assign count = include.limit | default: site.posts.size %}
+<ul class="news-list">
+  {% for post in site.posts limit:count %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %Y' }}</time>
+    <div>
+      <p>{{ post.summary | default: post.title | escape }}</p>
+      <a class="news-more" href="{{ post.url | relative_url }}">{{ post.title | escape }} →</a>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% if include.limit and site.posts.size > include.limit %}
+<p class="intro-links"><a href="{{ '/news/' | relative_url }}">All news →</a></p>
+{% endif %}
